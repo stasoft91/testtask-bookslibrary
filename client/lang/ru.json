@@ -39,5 +39,17 @@
 
   "title": "Заголовок",
   "isbn": "ISBN",
-  "description": "Описание"
+  "description": "Описание",
+  "Show_image": "Показать обложку",
+  "First": "Первый",
+  "Filter": "Фильтр",
+  "Search query": "Поисковый запрос",
+  "Records": "Записей",
+  "Page": "Страница",
+  "Showing": "Показываем с",
+  "to": "по",
+  "of": "из",
+  "records": "записей",
+  "One record": "Одна записть"
+
 }

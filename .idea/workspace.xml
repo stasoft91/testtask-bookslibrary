@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1815d3e3-5653-485d-b18b-af793e4499ee" name="Default Changelist" comment="" />
+    <list default="true" id="1815d3e3-5653-485d-b18b-af793e4499ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/ImagesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/Parse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/Parse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/ImageDownloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/ImageDownloader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/lang/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lang/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/lang/ru.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/welcome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/LocaleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/LocaleTest.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +29,9 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/public" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/translation" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
@@ -128,6 +142,7 @@
   <component name="ProjectId" id="1R6Mn0mwMqrJNm9MGreTD4edJsR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/client/static" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -173,7 +188,7 @@
       <workItem from="1568983256663" duration="966000" />
       <workItem from="1568984536971" duration="2096000" />
       <workItem from="1568986653426" duration="720000" />
-      <workItem from="1568987388438" duration="7320000" />
+      <workItem from="1568987388438" duration="11732000" />
     </task>
     <servers />
   </component>

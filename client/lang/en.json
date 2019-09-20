@@ -39,5 +39,16 @@
 
   "title": "Title",
   "isbn": "ISBN",
-  "description": "Description"
+  "description": "Description",
+  "Show_image": "Show cover",
+  "First": "First",
+  "Filter": "Filter",
+  "Search query": "Search query",
+  "Records": "Records",
+  "Page": "Page",
+  "Showing": "Showing",
+  "to": "to",
+  "of": "of",
+  "records": "records",
+  "One record": "One record"
 }

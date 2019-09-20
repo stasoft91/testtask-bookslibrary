@@ -7,6 +7,12 @@ use Intervention\Image\Facades\Image;
 use Intervention\Image\File;
 
 class ImageDownloader {
+
+    /**
+     * Save image and return its relative path
+     * @param $url
+     * @return string
+     */
     static function save($url) {
         $folder = str_random(2);
         $newName = $folder . '/' . str_random(40);

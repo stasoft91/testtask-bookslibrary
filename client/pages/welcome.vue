@@ -6,10 +6,11 @@
       </div>
 
       <div class="row">
-        <v-client-table :columns="columns" :data="data" :options="options">
+        <v-client-table ref="table" :columns="columns" :data="data" :options="options">
           <div slot="child_row" slot-scope="props">
             <a :href="`${baseURL}/photos/${props.row.image}`"><img :src="`${baseURL}/photos/thumbs/200x400/${props.row.image}`" alt=""></a>
           </div>
+          <a slot="info" slot-scope="props" target="_blank" class="btn btn-outline-secondary" @click.prevent="toggleRow(props.index)"> {{ $t('Show_image') }} </a>
         </v-client-table>
       </div>
     </div>
@@ -25,14 +26,36 @@ export default {
   head () {
     return { title: this.$t('home') }
   },
-
   data () {
     return {
       baseURL: 'http://bookslibrary',
 
-      columns: ['title', 'isbn', 'description'],
-      options: {
+      columns: ['info', 'title', 'isbn', 'description']
+    }
+  },
+
+  computed: {
+    ...mapGetters({
+      authenticated: 'auth/check'
+    }),
+    options () {
+      return {
+        texts: {
+          count: `${this.$t('Showing')} {from} ${this.$t('to')} {to} ${this.$t('of')} {count} ${this.$t('records')}|{count} ${this.$t('records')}|${this.$t('One record')}`,
+          first: this.$t('First'),
+          last: this.$t('Last'),
+          filter: this.$t('Filter') + ':',
+          filterPlaceholder: this.$t('Search query'),
+          limit: this.$t('Records') + ':',
+          page: this.$t('Page') + ':',
+          noResults: 'No matching records',
+          filterBy: 'Filter by {column}',
+          loading: 'Loading...',
+          defaultOption: 'Select {column}',
+          columns: 'Columns'
+        },
         headings: {
+          info: '',
           name: this.$t('title'),
           isbn: this.$t('isbn'),
           description: this.$t('description')
@@ -48,17 +71,19 @@ export default {
         ]
       }
     }
+
   },
-
-  computed: mapGetters({
-    authenticated: 'auth/check'
-  }),
-
   async asyncData () {
     const { data } = await axios.get('/books')
 
     return {
       data
+    }
+  },
+
+  methods: {
+    toggleRow (index) {
+      this.$refs.table.toggleChildRow(index)
     }
   }
 
@@ -90,22 +115,21 @@ export default {
   }
 
   .VueTables__child-row-toggler {
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
-    display: block;
-    margin: auto;
-    text-align: center;
+    display: none;
   }
 
   .VueTables__child-row-toggler--closed::before {
-    content: "+";
-    font-size: 30px ;
+    display: none;
   }
 
   .VueTables__child-row-toggler--open::before {
-    content: "-";
-    font-size: 30px ;
+    display: none;
+  }
+
+  .VueTables__table tbody tr:not(.VueTables__child-row) td:first-child,
+  .VueTables__table thead tr th:first-child
+  {
+    display: none;
   }
 
   .VueTables--client .row .col-md-12 {

@@ -82,12 +82,11 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
 
     'locales' => [
         'en' => 'EN',
-        'zh-CN' => '中文',
-        'es' => 'ES',
+        'ru' => 'RU',
     ],
 
     /*

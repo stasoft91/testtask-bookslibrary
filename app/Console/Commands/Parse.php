@@ -13,14 +13,14 @@ class Parse extends Command
      *
      * @var string
      */
-    protected $signature = 'parse:books {xml}';
+    protected $signature = 'parse:books {xml?}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Parse books from .xml';
+    protected $description = 'Parse books from an .xml file';
 
     /**
      * Create a new command instance.
@@ -39,6 +39,12 @@ class Parse extends Command
      */
     public function handle()
     {
+        if (!$this->argument('xml'))
+        {
+            $this->alert('You should provide xml file as a first parameter');
+            return false;
+        }
+
         $xmlBooks = simplexml_load_file($this->argument('xml'));
 
         $barPages = $this->output->createProgressBar($xmlBooks->count());
