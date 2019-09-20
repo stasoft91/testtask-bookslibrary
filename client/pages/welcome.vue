@@ -6,12 +6,12 @@
       </div>
 
       <div class="row">
-        <v-client-table ref="table" :columns="columns" :data="data" :options="options">
+        <v-server-table ref="table" :columns="columns" url="/books" :options="options">
           <div slot="child_row" slot-scope="props">
             <a :href="`${baseURL}/photos/${props.row.image}`"><img :src="`${baseURL}/photos/thumbs/200x400/${props.row.image}`" alt=""></a>
           </div>
           <a slot="info" slot-scope="props" target="_blank" class="btn btn-outline-secondary" @click.prevent="toggleRow(props.index)"> {{ $t('Show_image') }} </a>
-        </v-client-table>
+        </v-server-table>
       </div>
     </div>
   </div>
@@ -40,6 +40,19 @@ export default {
     }),
     options () {
       return {
+        requestFunction (data) {
+          return axios.get(this.url, {
+            params: data
+          }).catch(function (e) {
+            this.dispatch('error', e)
+          }.bind(this))
+        },
+        responseAdapter (data) {
+          return {
+            data: data.data.data,
+            count: data.data.count
+          }
+        },
         texts: {
           count: `${this.$t('Showing')} {from} ${this.$t('to')} {to} ${this.$t('of')} {count} ${this.$t('records')}|{count} ${this.$t('records')}|${this.$t('One record')}`,
           first: this.$t('First'),
@@ -74,11 +87,7 @@ export default {
 
   },
   async asyncData () {
-    const { data } = await axios.get('/books')
 
-    return {
-      data
-    }
   },
 
   methods: {
@@ -126,7 +135,7 @@ export default {
     display: none;
   }
 
-  .VueTables--client .row .col-md-12 {
+  .VueTables--server .row .col-md-12 {
     display: flex;
   }
 </style>
