@@ -28,7 +28,7 @@ export default {
   },
   data () {
     return {
-      baseURL: 'http://bookslibrary',
+      baseURL: 'http://lewa.stsft.ru',
 
       columns: ['info', 'title', 'isbn', 'description']
     }
