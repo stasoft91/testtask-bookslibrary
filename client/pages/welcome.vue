@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <div class="py-1 text-center">
-        <h2>Book listing</h2>
+        <h2>{{ $t('Book listing') }}</h2>
       </div>
 
       <div class="row">
@@ -104,12 +104,6 @@ export default {
     text-align: center;
   }
 
-  .glyphicon.glyphicon-eye-open {
-    width: 16px;
-    display: block;
-    margin: 0 auto;
-  }
-
   th:nth-child(3) {
     text-align: center;
   }
@@ -135,29 +129,4 @@ export default {
   .VueTables--client .row .col-md-12 {
     display: flex;
   }
-</style>
-
-<style scoped>
-.top-right {
-  position: absolute;
-  right: 10px;
-  top: 18px;
-}
-
-.title {
-  font-size: 85px;
-}
-
-.laravel {
-  color: #2e495e;
-}
-
-.nuxt {
-  color: #00c48d;
-}
-
-#app {
-  width: 95%;
-  margin: 0 auto;
-}
 </style>

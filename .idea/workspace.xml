@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1815d3e3-5653-485d-b18b-af793e4499ee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/lang/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/lang/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/lang/ru.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/welcome.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -176,7 +179,7 @@
       <workItem from="1568983256663" duration="966000" />
       <workItem from="1568984536971" duration="2096000" />
       <workItem from="1568986653426" duration="720000" />
-      <workItem from="1568987388438" duration="12691000" />
+      <workItem from="1568987388438" duration="13051000" />
     </task>
     <servers />
   </component>
