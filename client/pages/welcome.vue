@@ -56,7 +56,7 @@ export default {
         },
         headings: {
           info: '',
-          name: this.$t('title'),
+          title: this.$t('title'),
           isbn: this.$t('isbn'),
           description: this.$t('description')
         },
